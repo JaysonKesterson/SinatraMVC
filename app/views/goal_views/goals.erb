@@ -1,0 +1,9 @@
+<div>
+<h1>Welcome, <%= @user.username %></h1>
+<% @goals.each do |goal| %>
+    <p><%= goal.goalname %></p>
+    <p><%= goal.description%></p>
+    <p><%= goal.achieved?%></p>
+    <% end %>
+    <a href="/logout">Log out</a>.
+</div>
