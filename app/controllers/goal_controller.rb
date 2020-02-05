@@ -20,7 +20,7 @@ class GoalController < ApplicationController
   
   post '/goals' do
     if !params.empty?
-      goal = Goal.new(:content => params[:content], :user_id => session[:user_id])
+      goal = Goal.new(params)
       goal.save
       redirect "/goals/#{goal.id}"
     else

@@ -1,7 +1,7 @@
 class UserController < ApplicationController
 
   get "/homepage" do
-    erb :"/user_views/index"
+    redirect '/goals'
   end
 
   get '/signup' do
