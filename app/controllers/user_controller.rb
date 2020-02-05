@@ -1,14 +1,14 @@
 class UserController < ApplicationController
 
   get "/homepage" do
-    erb :"/user_controllers/index.html"
+    erb :"/user_views/index"
   end
 
   get '/signup' do
     if logged_in?
       redirect '/homepage'
     else
-      erb :'/user_controllers/signup.html'
+      erb :'/user_views/signup'
     end
   end
   
@@ -27,7 +27,7 @@ class UserController < ApplicationController
     if logged_in?
       redirect '/homepage'
     else
-      erb :'user_controllers/login.html'
+      erb :'user_views/login'
     end
   end
   
