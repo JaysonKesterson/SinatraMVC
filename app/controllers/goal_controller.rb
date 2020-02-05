@@ -10,11 +10,21 @@ class GoalController < ApplicationController
     end
   end 
   
-  get '/tweets/new' do
+  get '/goals/new' do
     if logged_in?
       erb :'/goal_views/new'
     else
       redirect '/login'
+    end
+  end
+  
+  post '/goals' do
+    if !params.empty?
+      goal = Goal.new(:content => params[:content], :user_id => session[:user_id])
+      goal.save
+      redirect "/goals/#{goal.id}"
+    else
+      redirect '/goals/new'
     end
   end
     
