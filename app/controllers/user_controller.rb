@@ -11,5 +11,16 @@ class UserController < ApplicationController
       erb :'/user_controllers/signup.html'
     end
   end
+  
+  post '/signup' do
+    user = User.new(params)
+        
+    if user.save
+      session[:user_id] = user.id
+      redirect '/homepage'
+    else
+      redirect '/signup'
+    end
+  end
 
 end
