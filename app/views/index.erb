@@ -2,8 +2,12 @@
   <header>
     <div class="sidebar">
       <ul>
+        <% if !logged_in? %>
         <li><b><a href='/login'>Log In</a></b></li>
-        <li><b><a href='signup'>Sign Up</a></b></li>
+        <li><b><a href='/signup'>Sign Up</a></b></li>
+        <% else %>
+        <li><b><a href='/logout'>Log Out</a></b></li>
+        <% end %>
       </ul>
     </div>
     </header>
