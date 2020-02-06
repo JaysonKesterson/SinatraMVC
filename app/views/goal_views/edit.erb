@@ -1,0 +1,13 @@
+<h1>Edit your previous Goals!</h1>
+<form method="POST" action="/goals/<%= @goal.id %>">
+    <label>Name of your Goal:</label><br />
+    <input type="hidden" name="_method" value="PATCH">
+    <input type="text" name="goal_name" placeholder="<%= @goal.goal_name %>"><br /><br />
+    <label>Description of your Goal:</label><br />
+    <input type="hidden" name="_method" value="PATCH">
+    <input type="text" name="description" placeholder="<%= @goal.description %>"><br /><br />
+    <label>Have you achieved this goal yet?:</label><br />
+    <input type="hidden" name="_method" value="PATCH">
+    <input type="text" name="achieved?" placeholder="<%= @goal.achieved? %>"><br /><br />
+    <input type="submit" name="submit" id="submit" value="Edit">
+</form>
