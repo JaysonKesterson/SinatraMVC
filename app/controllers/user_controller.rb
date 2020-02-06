@@ -6,7 +6,7 @@ class UserController < ApplicationController
 
   get '/signup' do
     if logged_in?
-      redirect '/homepage'
+      redirect '/users/:id'
     else
       erb :'/user_views/signup'
     end
@@ -17,7 +17,7 @@ class UserController < ApplicationController
         
     if @user.save
       session[:user_id] = @user.id
-      redirect '/homepage'
+      redirect '/users/:id'
     else
       redirect '/signup'
     end
@@ -25,7 +25,7 @@ class UserController < ApplicationController
   
   get '/login' do
     if logged_in?
-      redirect '/homepage'
+      redirect '/users/:id'
     else
       erb :'user_views/login'
     end
@@ -35,7 +35,7 @@ class UserController < ApplicationController
     @user = User.find_by(:username => params[:username])
       if @user && @user.authenticate(params[:password])
         session[:user_id] = @user.id
-        redirect '/homepage'
+        redirect '/users/:id'
       else 
         redirect '/login'
       end
@@ -45,5 +45,15 @@ class UserController < ApplicationController
     session.clear
     redirect '/login'
   end
+  
+  get '/users/:id' do
+    if logged_in?
+      @user = User.find_by_id(session[:user_id])
+      @user_goals = Goal.all.collect{|goal| goal.user_id == current_user.id}   
+      erb :'/user_views/show'
+    else
+      redirect '/login'
+    end
+  end 
 
 end
