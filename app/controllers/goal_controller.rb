@@ -36,5 +36,40 @@ class GoalController < ApplicationController
       redirect '/login'
     end
   end
+  
+  get '/goals/:id/edit' do
+    @goals = Goal.find_by_id(params[:id])
+    if logged_in?
+      erb :'/goal_views/edit'
+    else
+      redirect '/login'
+    end
+  end
+  
+  patch '/goals/:id' do
+    @goal = Goal.find_by_id(params[:id])
+    if logged_in?
+      if @goal.user_id == current_user.id && !params.empty?
+        @goal.update(params)
+      else
+        redirect "/goals/#{@goal.id}/edit"
+      end
+    else
+      redirect '/login'
+    end
+  end
+  
+   delete '/goals/:id' do
+    @goal = Goal.find_by_id(params[:id])
+      if logged_in?
+        if @goal.user_id == current_user.id
+          @goal.delete
+        else
+          redirect "/goals/#{@goal.id}"
+        end
+      else
+        redirect '/login'
+      end
+    end
     
 end
