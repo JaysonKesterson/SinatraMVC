@@ -1,8 +1,8 @@
 <p><%= @goal.goal_name %></p>
 <p><%= @goal.description %></p>
 <p><%= @goal.achieved? %></p>
-<a href="/goals/<%= @tweet.id %>/edit">Edit Tweet</a>
-<form method="POST" action="/tweets/<%= @tweet.id%>">
+<a href="/goals/<%= @goal.id %>/edit">Edit Goal</a>
+<form method="POST" action="/goals/<%= @goal.id%>">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Tweet" id="Delete Tweet">
+    <input type="submit" value="Delete Goal" id="Delete Goal">
 </form>
