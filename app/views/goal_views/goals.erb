@@ -1,8 +1,8 @@
 <div>
     <h1>Here are everyones goals!</h1>
     <% @goals.each do |goal| %>
-    <p>Name of your Goal: <%= goal.goal_name %></p>
-    <p>Description of your Goal: <%= goal.description%></p>
+    <p>Name of Goal: <%= goal.goal_name %></p>
+    <p>Description of Goal: <%= goal.description%></p>
     <p>Has this goal been achieved yet? <%= goal.achieved?%></p>
     <% end %>
     <a href="/logout">Log out</a>.
