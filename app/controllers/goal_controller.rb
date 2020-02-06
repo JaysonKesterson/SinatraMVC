@@ -27,5 +27,14 @@ class GoalController < ApplicationController
       redirect '/goals/new'
     end
   end
+  
+  get '/goals/:id' do
+    if logged_in?
+      @goal = Goal.find_by_id(params[:id])
+      erb :'/goal_views/show'
+    else
+      redirect '/login'
+    end
+  end
     
 end
