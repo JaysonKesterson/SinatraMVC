@@ -8,6 +8,9 @@
     <input type="text" name="description" placeholder="<%= @goal.description %>"><br /><br />
     <label>Have you achieved this goal yet?:</label><br />
     <input type="hidden" name="_method" value="PATCH">
-    <input type="text" name="achieved?" placeholder="<%= @goal.achieved? %>"><br /><br />
+    <select name="achieved?"><br />
+      <option value="no">NO</option>
+      <option value="yes">YES</option>
+    </select> <br />
     <input type="submit" name="submit" id="submit" value="Edit">
 </form>
