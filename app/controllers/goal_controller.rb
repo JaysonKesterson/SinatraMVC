@@ -66,7 +66,7 @@ class GoalController < ApplicationController
         if @goal.user_id == current_user.id
           @goal.delete
         else
-          redirect "/goals/"
+          redirect "/goals"
         end
       else
         redirect '/login'

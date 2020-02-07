@@ -1,9 +1,8 @@
 <h1>Welcome, <%= @user.username %></h1>
-<% @user_goals.each do |goal| %>
-    <p>Goal name:<%= goal.goal_name %></p>
-    <p>Goal description:<%= goal.description %></p>
-    <p>Has this been achieved yet?<%= goal.achieved? %></p>
+<br>
+<% @user_goals.each_with_index do |goal,index| %>
+    <h2><b>Goal #<%= index + 1 %>: </b><%= goal.goal_name %> <a href='/goals/<%= goal.id %>'>Click to edit or delete</a></h2>
+    <p><b>Goal description: </b><%= goal.description %></p>
+    <p><b>Has this been achieved yet? </b><%= goal.achieved? %></p>
 <% end %>
-  <a href="/logout">Log out</a>.
-  <a href="/goals/new">Create a Goal</a>
 
