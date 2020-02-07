@@ -1,17 +1,6 @@
 <div class="container">
   <header>
-    <div class="navigation">
-      <ul>
-        <% if !logged_in? %>
-        <li><b><a href='/login'>Log In</a></b></li>
-        <li><b><a href='/signup'>Sign Up</a></b></li>
-        <% else %>
-        <li><b><a href='/logout'>Log Out</a></b></li>
-        <li><b><a href="/users/<%= current_user.id %>">See your Goal List!</a></b></li>
-        <% end %>
-      </ul>
-    </div>
-    </header>
+  </header>
   <div class="col-md-8 col-md-offset-2">
     <h2>My Goals</h2>
 
