@@ -21,7 +21,7 @@ class GoalController < ApplicationController
   post '/goals' do
     if !params.empty?
       goal = Goal.new(params)
-      goal.user_id = current_user.id
+      goal.user = current_user
       goal.save
       redirect "/goals/#{goal.id}"
     else
@@ -66,7 +66,7 @@ class GoalController < ApplicationController
         if @goal.user_id == current_user.id
           @goal.delete
         else
-          redirect "/goals/#{@goal.id}"
+          redirect "/goals/"
         end
       else
         redirect '/login'

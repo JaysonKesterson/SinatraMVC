@@ -7,7 +7,7 @@
         <li><b><a href='/signup'>Sign Up</a></b></li>
         <% else %>
         <li><b><a href='/logout'>Log Out</a></b></li>
-        <li><b><a href='/users/:id'>See your Goal List!</a></b></li>
+        <li><b><a href="/users/<%= current_user.id %>">See your Goal List!</a></b></li>
         <% end %>
       </ul>
     </div>
