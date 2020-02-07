@@ -39,7 +39,7 @@ class GoalController < ApplicationController
   end
   
   get '/goals/:id/edit' do
-    @goals = Goal.find_by_id(params[:id])
+    @goal = Goal.find_by_id(params[:id])
     if logged_in?
       erb :'/goal_views/edit'
     else
@@ -51,7 +51,11 @@ class GoalController < ApplicationController
     @goal = Goal.find_by_id(params[:id])
     if logged_in?
       if @goal.user == current_user && !params.empty?
-        @goal.update(params)
+        @goal.goal_name = params[:goal_name]
+        @goal.description = params[:description]
+        @goal.achieved = params[:achieved?]
+        @goal.save
+        redirect to "/goals/#{@goal.id}"
       else
         redirect "/goals/#{@goal.id}/edit"
       end
