@@ -21,6 +21,7 @@ class GoalController < ApplicationController
   post '/goals' do
     if !params.empty?
       goal = Goal.new(params)
+      goal.user_id = current_user.id
       goal.save
       redirect "/goals/#{goal.id}"
     else
