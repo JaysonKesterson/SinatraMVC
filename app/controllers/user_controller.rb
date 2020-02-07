@@ -48,7 +48,7 @@ class UserController < ApplicationController
   
   get '/users/:id' do
     if logged_in?
-      @user = User.find_by_id(session[:user_id])
+      @user = current_user
       @user_goals = Goal.all.select{|goal| goal.user_id == current_user.id}   
       erb :'/user_views/show'
     else
