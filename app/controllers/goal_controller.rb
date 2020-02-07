@@ -50,7 +50,7 @@ class GoalController < ApplicationController
   patch '/goals/:id' do
     @goal = Goal.find_by_id(params[:id])
     if logged_in?
-      if @goal.user_id == current_user.id && !params.empty?
+      if @goal.user == current_user && !params.empty?
         @goal.update(params)
       else
         redirect "/goals/#{@goal.id}/edit"
