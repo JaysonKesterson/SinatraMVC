@@ -53,7 +53,7 @@ class GoalController < ApplicationController
       if @goal.user == current_user && !params.empty?
         @goal.goal_name = params[:goal_name]
         @goal.description = params[:description]
-        @goal.achieved = params[:achieved?]
+        @goal.achieved = params[:achieved]
         @goal.save
         redirect to "/goals/#{@goal.id}"
       else

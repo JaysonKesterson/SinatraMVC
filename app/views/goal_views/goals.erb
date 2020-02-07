@@ -4,6 +4,6 @@
     <% @goals.each do |goal| %>
     <h2>Name of Goal: <%= goal.goal_name %> by: <%= goal.user.username %></h2>
     <p><b>Description of Goal: </b><%= goal.description%></p>
-    <p><b>Has this goal been achieved yet? </b><%= goal.achieved?%></p>
+    <p><b>Has this goal been achieved yet? </b><%= goal.achieved%></p>
     <% end %>
 </div>
