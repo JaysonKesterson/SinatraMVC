@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many :goals
-  validates_presence_of :username, :email, :password
+  validates :username, presence: true, uniqueness: true, length: { minimum: 2 }
+  validates :email, presence: true, uniqueness: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { in: 6..15 }
 end
