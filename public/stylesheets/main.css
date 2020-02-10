@@ -6,7 +6,7 @@
     padding: 0;
   }
   
-  ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -151,4 +151,6 @@ li a:hover {
     font-size: 18px;
     line-height: 24px;
   }
+  
+ 
 }

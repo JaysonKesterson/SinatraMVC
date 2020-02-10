@@ -1,4 +1,4 @@
-<h1>Welcome, <%= @user.username %></h1>
+<h2>Welcome, <%= @user.username %></h2>
 <br>
 <% @user_goals.each_with_index do |goal,index| %>
     <h2><b>Goal #<%= index + 1 %>: </b><%= goal.goal_name %> <a href='/goals/<%= goal.id %>'>Click to edit or delete</a></h2>
