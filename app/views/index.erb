@@ -17,9 +17,11 @@
     
     <p>The practice of writing goals down allows for people to visualize goals, and motivate themselves to achieve them. Research has uncovered many key aspects of goal setting theory and its link to success (Kleingeld, et al, 2011). Setting goals is linked with self-confidence, motivation, and autonomy (Locke & Lathan, 2006). A 2015 study by psychologist Gail Matthews showed when people wrote down their goals, they were 33 percent more successful in achieving them than those who formulated outcomes in their heads.</p>
     
-    <h2>Our Most Recent Accomplished Goals!</h2>
+    <h2>Newest Accomplished Goal</h2>
     
-    <p><%= @achieved_goals %></p>
+    <p><b><%= @recently_achieved.user.username %></b> has recently completed the goal <b><%= @recently_achieved.goal_name %></b>!</p>
+    <p>This goal's description was to <b><%= @recently_achieved.description %></b></p>
+    <p>Amazing job! Don't stop here though, use this success to push yourself forward to even further improve with new and more challenging goals!</p>
     
 
     
