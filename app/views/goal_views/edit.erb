@@ -2,9 +2,9 @@
 <form method="POST" action="/goals/<%= @goal.id %>">
     <label>Name of your Goal:</label><br />
     <input type="hidden" name="_method" value="PATCH">
-    <input type="text" name="goal_name" placeholder="<%= @goal.goal_name %>"><br /><br />
+    <input type="text" name="goal_name" value="<%= @goal.goal_name %>" required><br /><br />
     <label>Description of your Goal:</label><br />
-    <input type="text" name="description" placeholder="<%= @goal.description %>"><br /><br />
+    <input type="text" name="description" value="<%= @goal.description %>" required><br /><br />
     <label>Have you achieved this goal yet?:</label><br />
     <select name="achieved"><br />
       <option value="no">NO</option>
