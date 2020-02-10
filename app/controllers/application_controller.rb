@@ -10,6 +10,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
+    @achieved_goals = Goal.all.select {|goal| goal.achieved == "yes"}
+    @recently_achieved = @achieved_goals.last
     erb :index
   end
   
