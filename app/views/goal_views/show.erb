@@ -1,8 +1,9 @@
 <h2>Goal Name: <%= @goal.goal_name %></h2>
 <p><b>Description of Goal: </b><%= @goal.description %></p>
 <p><b>Has this goal been achieved yet? </b><%= @goal.achieved %></p>
-<a href="/goals/<%= @goal.id %>/edit">Edit Goal</a>
-<form method="POST" action="/goals/<%= @goal.id %>">
+<p>Click below to edit this goal. (<b>You can only edit your own goals.</b>) </p><a href="/goals/<%= @goal.id %>/edit">Edit Goal</a>
+<p>Click below to delete this goal. (<b>You can only delete your own goals.</b>)<form method="POST" action="/goals/<%= @goal.id %>">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete Goal" id="Delete Goal">
 </form>
+</p>

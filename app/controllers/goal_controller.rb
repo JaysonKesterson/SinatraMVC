@@ -57,7 +57,7 @@ class GoalController < ApplicationController
         @goal.save
         redirect to "/goals/#{@goal.id}"
       else
-        redirect "/goals/#{@goal.id}/edit"
+        redirect "/goals/#{@goal.id}"
       end
     else
       redirect '/login'
