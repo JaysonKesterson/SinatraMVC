@@ -10,6 +10,14 @@
 border-style: groove;
 border-color: #85C1E9;
 background-color: #85C1E9;
+padding: 0px;
+margin: 0px;
+}
+
+#goal_attrs {
+  border-style: groove;
+  padding: 0px;
+  margin: 0px;
 }
   
 ul {

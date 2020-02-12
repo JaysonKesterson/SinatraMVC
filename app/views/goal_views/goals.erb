@@ -3,7 +3,9 @@
     <br>
     <% @goals.each do |goal| %>
     <h2 id="all_goals">Name of Goal: <%= goal.goal_name %> by: <%= goal.user.username %></h2>
+    <div id="goal_attrs">
     <p><b>Description of Goal: </b><%= goal.description%></p>
     <p><b>Has this goal been achieved yet? </b><%= goal.achieved%></p>
+    </div>
     <% end %>
 </div>
