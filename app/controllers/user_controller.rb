@@ -6,7 +6,7 @@ class UserController < ApplicationController
 
   get '/signup' do
     if logged_in?
-      redirect '/users/:id'
+      redirect "/users/#{current_user.id}"
     else
       erb :'/user_views/signup'
     end
@@ -17,7 +17,7 @@ class UserController < ApplicationController
         
     if @user.save
       session[:user_id] = @user.id
-      redirect '/users/:id'
+      redirect "/users/#{current_user.id}"
     else
       redirect '/signup'
     end
@@ -25,7 +25,7 @@ class UserController < ApplicationController
   
   get '/login' do
     if logged_in?
-      redirect '/users/:id'
+      redirect "/users/#{current_user.id}"
     else
       erb :'user_views/login'
     end
