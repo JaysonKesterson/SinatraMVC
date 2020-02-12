@@ -6,6 +6,21 @@
     padding: 0;
   }
   
+#user_goals {
+border-style: groove;
+border-color: #AED6F1;
+border-radius: 5px;
+background-color: #AED6F1;
+padding: 0px;
+margin: 0px;
+}
+  
+#user_greeting {
+  border-bottom: none;
+  padding: 0px;
+  margin: 0px;
+}
+  
 #goals_title {
   border-bottom: none;
   padding: 0px;
@@ -15,6 +30,7 @@
 #all_goals {
 border-style: groove;
 border-color: #85C1E9;
+border-radius: 5px;
 background-color: #85C1E9;
 padding: 0px;
 margin: 0px;
@@ -22,6 +38,7 @@ margin: 0px;
 
 #goal_attrs {
   border-style: groove;
+  border-radius: 5px;
   padding: 0px;
   margin: 0px;
 }
