@@ -6,6 +6,11 @@
     padding: 0;
   }
   
+#all_goals {
+border-style: groove;
+border-color: #85C1E9;
+}
+  
 ul {
   list-style-type: none;
   margin: 0;
