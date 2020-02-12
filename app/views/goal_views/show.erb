@@ -1,10 +1,11 @@
-<h2 id="user_goals">Goal Name: <%= @goal.goal_name %></h2>
+<h2 id="user_goals">Goal Name: <%= @goal.goal_name.capitalize %></h2>
 <div id="goal_attrs">
-<p><b>Description of Goal: </b><%= @goal.description %></p>
-<p><b>Has this goal been achieved yet? </b><%= @goal.achieved %></p>
+<p><b>Description of Goal: </b><%= @goal.description.capitalize %></p>
+<p><b>Has this goal been achieved yet? </b><%= @goal.achieved.capitalize %></p>
 </div>
 <br>
 <a class="edit" href="/goals/<%= @goal.id %>/edit">Edit Goal</a>
+<p></p>
 <form class="delete" method="POST" action="/goals/<%= @goal.id %>">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete Goal" id="Delete Goal">

@@ -8,10 +8,12 @@
   
 .edit_delete{
   border-style: groove;
+  border-width: thin;
+  border-color: #A6ACAF;
   font-size: 13px;
   padding: 3px;
   border-radius: 5px;
-  background-color: white;
+  background-color: #F4ECF7;
   text-decoration: none;
 }
 
