@@ -10,50 +10,30 @@ Prerequisites
 
 Before doing the above steps, your terminal needs to be able to have the git commands that connect to git hub (to clone the repository), and the terminal needs to be able to work with the languages Ruby and HTML.
 
-Give examples
 Installing
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Step 1: In your terminal type 'git clone git@github.com:JaysonKesterson/SinatraMVC.git'
 
-Give the example
-And repeat
+Step 2: type cd SinatraMVC in your terminal and bundle install (this will install the gems necessary to run the program)
 
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+Step 3: start a local host with the shotgun command in the terminal
 
-Running the tests
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
-
-Give an example
-And coding style tests
-Explain what these tests test and why
-
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
+Step 4: paste the server host url given by shotgun in the terminal into a browser URL and the application should be running
 
 Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
+Sinatra - The framework
+ActiveRecord - used for models and database management
+Ruby - Main programming language used
+HTML - used to display forms and views in browser
+CSS - used to style the HTML
 
 Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
+Jayson Kesterson
 
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+
+Inspired by my own desire to have a place to list my goals
