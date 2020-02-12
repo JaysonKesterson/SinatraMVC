@@ -2,10 +2,10 @@
     <h2 id="goals_title"><center>Everyone's Goals!</center></h2>
     <br>
     <% @goals.each do |goal| %>
-    <h3 id="all_goals">Name of Goal: <%= goal.goal_name %> by: <%= goal.user.username %></h3>
+    <h3 id="all_goals">Goal Name: <%= goal.goal_name %> | by: <%= goal.user.username %></h3>
     <div id="goal_attrs">
-    <p><b>Description of Goal: </b><%= goal.description%></p>
-    <p><b>Has this goal been achieved yet? </b><%= goal.achieved%></p>
+    <p><b>Description: </b><%= goal.description.capitalize%></p>
+    <p><b>Has this goal been achieved yet? </b><%= goal.achieved.capitalize%></p>
     </div>
     <% end %>
 </div>
