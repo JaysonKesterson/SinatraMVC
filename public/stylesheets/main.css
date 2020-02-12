@@ -6,6 +6,11 @@
     padding: 0;
   }
   
+a.{
+  border-style: groove;
+  background-color: white;
+}
+  
 #user_goals {
 border-style: groove;
 border-color: #AED6F1;

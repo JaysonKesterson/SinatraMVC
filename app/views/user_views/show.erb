@@ -1,10 +1,10 @@
 <h2 id="user_greeting">Welcome, <%= @user.username %></h2>
 <br>
 <% @user_goals.each_with_index do |goal,index| %>
-    <h3 id="user_goals"><b>Goal #<%= index + 1 %>: </b><%= goal.goal_name %> <a href='/goals/<%= goal.id %>'>Click to edit or delete</a></h3>
+    <h3 id="user_goals"><b>Goal #<%= index + 1 %>: </b><%= goal.goal_name.capitalize %> <a href='/goals/<%= goal.id %>'>Edit or Delete</a></h3>
     <div id="goal_attrs">
-    <p><b>Goal description: </b><%= goal.description %><br>
-    <b>Has this been achieved yet? </b><%= goal.achieved %></p>
+    <p><b>Goal description: </b><%= goal.description.capitalize %><br>
+    <b>Has this been achieved yet? </b><%= goal.achieved.capitalize %></p>
     </div>
 <% end %>
 
