@@ -6,16 +6,26 @@
     padding: 0;
   }
   
-a.edit_delete{
+.edit_delete{
   border-style: groove;
   font-size: 13px;
   padding: 3px;
   border-radius: 5px;
   background-color: white;
   text-decoration: none;
-  
-  
 }
+
+.edit{
+  border-style: solid;
+  border-width: thin;
+  border-color: #A6ACAF ;
+  color: black;
+  font-size: 13px;
+  padding: 2px;
+  background-color: #F2F3F4;
+  text-decoration: none;
+}
+
   
 #user_goals {
 border-style: groove;
