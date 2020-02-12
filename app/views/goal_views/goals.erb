@@ -1,8 +1,8 @@
 <div>
-    <h1>Everybody's goals! Root for them!</h1>
+    <h1 id="goals_title">Everybody's goals! Root for them!</h1>
     <br>
     <% @goals.each do |goal| %>
-    <h2>Name of Goal: <%= goal.goal_name %> by: <%= goal.user.username %></h2>
+    <h2 id="all_goals">Name of Goal: <%= goal.goal_name %> by: <%= goal.user.username %></h2>
     <p><b>Description of Goal: </b><%= goal.description%></p>
     <p><b>Has this goal been achieved yet? </b><%= goal.achieved%></p>
     <% end %>
