@@ -1,4 +1,6 @@
 class Goal < ActiveRecord::Base
   belongs_to :user
-  validates_presence_of :goal_name, :description, :achieved
+  validates :goal_name, presence: true, length: { minimum: 3 }
+  validates :description, presence: true, length: { minimum: 3 }
+  validates :achieved, presence: true
 end
