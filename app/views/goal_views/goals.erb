@@ -4,8 +4,8 @@
     <% @goals.each do |goal| %>
     <h3 id="all_goals">Goal Name: <%= goal.goal_name.capitalize %> | by: <%= goal.user.username %></h3>
     <div id="goal_attrs">
-    <p><b>Description: </b><%= goal.description.capitalize%></p>
-    <p><b>Has this goal been achieved yet? </b><%= goal.achieved.capitalize%></p>
+    <p><b>Description: </b><%= goal.description.capitalize%><br>
+    <b>Has this goal been achieved yet? </b><%= goal.achieved.capitalize%></p>
     </div>
     <% end %>
 </div>
