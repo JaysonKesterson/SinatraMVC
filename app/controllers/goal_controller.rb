@@ -22,8 +22,11 @@ class GoalController < ApplicationController
     if !params.empty?
       goal = Goal.new(params)
       goal.user = current_user
-      goal.save
+    if goal.save
       redirect "/goals/#{goal.id}"
+    else 
+      redirect '/goals/new'
+    end
     else
       redirect '/goals/new'
     end
@@ -40,8 +43,12 @@ class GoalController < ApplicationController
   
   get '/goals/:id/edit' do
     @goal = Goal.find_by_id(params[:id])
-    if logged_in?
+    if logged_in? 
+      if current_user == @goal.user
       erb :'/goal_views/edit'
+      else
+      redirect "/goals/#{@goal.id}"
+      end
     else
       redirect '/login'
     end
