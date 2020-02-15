@@ -6,6 +6,12 @@
     padding: 0;
   }
   
+.sign_up_instructions {
+  color: #CE335F;
+  padding: 0px;
+  margin: 0px;
+}
+  
 .edit_delete{
   border-style: groove;
   border-width: thin;
