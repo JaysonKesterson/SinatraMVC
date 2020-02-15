@@ -35,7 +35,11 @@ class GoalController < ApplicationController
   get '/goals/:id' do
     if logged_in?
       @goal = Goal.find_by_id(params[:id])
-      erb :'/goal_views/show'
+      if @goal
+        erb :'/goal_views/show'
+      else 
+        erb:'/goal_views/error'
+      end
     else
       redirect '/login'
     end
