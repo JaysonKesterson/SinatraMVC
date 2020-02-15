@@ -6,6 +6,12 @@
     padding: 0;
   }
   
+.goal_instructions {
+  color: #CE335F;
+  padding: 0px;
+  margin: 0px;
+}
+
 .sign_up_instructions {
   color: #CE335F;
   padding: 0px;
